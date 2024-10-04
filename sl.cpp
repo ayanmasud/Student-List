@@ -92,6 +92,7 @@ void del(vector<Student*> &s) { // delete a student from the list
   for (i = s.begin(); i<s.end(); i++) { // goes through all of the students to see if any have that id
     if ((*i)->id == iderase) {
       s.erase(i); // removes it from the vector
+      delete (*i);
       return;
     }
   }
